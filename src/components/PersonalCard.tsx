@@ -1,11 +1,15 @@
 import React from 'react';
 
-const PersonalCard: React.FC = () => {
+interface PersonalCardProps {
+  className?: string;
+}
+
+const PersonalCard: React.FC<PersonalCardProps> = ({ className }) => {
   const name = 'Romina Manzano';
   const title = 'Systems Engineer & Frontend Web Developer';
 
   return (
-    <div>
+    <div className={className}>
       <h1>{name}</h1>
       <h2>{title}</h2>
 

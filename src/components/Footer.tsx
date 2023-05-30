@@ -2,8 +2,10 @@ import React from 'react';
 import dayjs from 'dayjs';
 
 const Footer = () => (
-  <footer>
-    &#169; {dayjs().year()} Romina Manzano
+  <footer className="flex justify-center">
+    <div>
+      &#169; {dayjs().year()} Romina Manzano
+    </div>
   </footer>
 );
 
