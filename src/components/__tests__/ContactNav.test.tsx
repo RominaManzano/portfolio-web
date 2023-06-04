@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 import ContactNav from '../ContactNav';
 
 describe('ContactNav', () => {
-  it('renders two clickable social media icons', () => {
+  it('should render two clickable social media icons', () => {
     const { getByRole } = render(<ContactNav />);
 
     const githubIcon = getByRole('link', { name: 'GitHub' });
