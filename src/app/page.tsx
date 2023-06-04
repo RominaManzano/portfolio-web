@@ -7,7 +7,8 @@ import Footer from '@/components/Footer';
 import MenuCard, { MenuItem } from '@/components/MenuCard';
 import PersonalCard from '@/components/PersonalCard';
 
-const mainClasses = 'flex justify-between p-8 gap-4';
+const containerClasses = 'bg-gradient-to-br from-raisin-black via-black-coffee to-light-coral h-screen';
+const mainClasses = 'h-[80%] flex justify-between p-8 gap-4 bg-developer-graph bg-no-repeat bg-[length:450px] bg-origin-content bg-right-bottom';
 const informationClassName = 'flex-1';
 const menuClassName = 'flex-none w-64';
 
@@ -38,7 +39,7 @@ const Home = () => {
   const [selectedSection, setSelectedSection] = useState(menuItems[0]);
 
   return (
-    <>
+    <div className={containerClasses}>
       <ContactNav />
       <main className={mainClasses}>
         <MenuCard
@@ -49,7 +50,7 @@ const Home = () => {
         {selectedSection.component}
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
