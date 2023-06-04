@@ -7,9 +7,9 @@ import Footer from '@/components/Footer';
 import MenuCard, { MenuItem } from '@/components/MenuCard';
 import PersonalCard from '@/components/PersonalCard';
 
-const mainClasses = 'flex min-h-screen justify-between p-8 gap-4';
+const mainClasses = 'flex justify-between p-8 gap-4';
 const informationClassName = 'flex-1';
-const menuClassName = 'flex-1';
+const menuClassName = 'flex-none w-64';
 
 const menuItems: MenuItem[] = [
   {
@@ -41,12 +41,12 @@ const Home = () => {
     <>
       <ContactNav />
       <main className={mainClasses}>
-        {selectedSection.component}
         <MenuCard
           className={menuClassName}
           items={menuItems}
           onMenuChange={setSelectedSection}
         />
+        {selectedSection.component}
       </main>
       <Footer />
     </>
