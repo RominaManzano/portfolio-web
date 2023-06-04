@@ -18,17 +18,19 @@ const MenuCard: React.FC<MenuCardProps> = ({
   onMenuChange,
 }) => (
   <div className={className}>
-    <ul>
-      {items.map(item => (
-        <li
-          key={item.id}
-          className="text-light-salmon-pink"
-          onClick={() => onMenuChange(item)}
-        >
-          {item.title}
-        </li>
-      ))}
-    </ul>
+    <div className="border-t-2 border-l-2 border-light-coral p-4 w-3/6">
+      <ul>
+        {items.map(item => (
+          <li
+            key={item.id}
+            className="text-light-salmon-pink"
+            onClick={() => onMenuChange(item)}
+          >
+            {item.title}
+          </li>
+        ))}
+      </ul>
+    </div>
   </div>
 );
 
