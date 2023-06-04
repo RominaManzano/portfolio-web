@@ -23,7 +23,7 @@ const MenuCard: React.FC<MenuCardProps> = ({
         {items.map(item => (
           <li
             key={item.id}
-            className="text-light-salmon-pink"
+            className="text-light-salmon-pink hover:cursor-pointer"
             onClick={() => onMenuChange(item)}
           >
             {item.title}
