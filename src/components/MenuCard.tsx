@@ -20,7 +20,11 @@ const MenuCard: React.FC<MenuCardProps> = ({
   <div className={className}>
     <ul>
       {items.map(item => (
-        <li key={item.id} onClick={() => onMenuChange(item)}>
+        <li
+          key={item.id}
+          className="text-light-salmon-pink"
+          onClick={() => onMenuChange(item)}
+        >
           {item.title}
         </li>
       ))}

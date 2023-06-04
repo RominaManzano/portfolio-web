@@ -38,7 +38,7 @@ const Home = () => {
   const [selectedSection, setSelectedSection] = useState(menuItems[0]);
 
   return (
-    <>
+    <div className="bg-gradient-to-br from-raisin-black via-black-coffee to-light-coral h-screen">
       <ContactNav />
       <main className={mainClasses}>
         <MenuCard
@@ -49,7 +49,7 @@ const Home = () => {
         {selectedSection.component}
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

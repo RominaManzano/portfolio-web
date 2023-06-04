@@ -12,11 +12,17 @@ const ContactNav = () => {
   return (
     <nav className="flex justify-end p-4 gap-2">
       <Link href={githubUrl} target="_blank">
-        <FaGithub size={iconSize} />
+        <FaGithub
+          size={iconSize}
+          className="text-light-coral"
+        />
       </Link>
 
       <Link href={linkedinUrl} target="_blank">
-        <FaLinkedin size={iconSize} />
+        <FaLinkedin
+          size={iconSize}
+          className="text-light-coral"
+        />
       </Link>
     </nav>
   );
