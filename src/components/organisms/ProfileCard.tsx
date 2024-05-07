@@ -19,7 +19,7 @@ const ProfileCard = ({ name, title, image, infoItems }: ProfileCardProps) => {
           gap={4}
         >
           <Stack direction="column" alignItems="center" flex={1}>
-            <Avatar name={name} src={image} size="2xl" />
+            <Avatar name={name} src={image} size="2xl" bg="gray.300" />
             <Heading as="h1" size="lg" color="gray.700">
               {name}
             </Heading>

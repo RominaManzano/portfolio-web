@@ -1,4 +1,5 @@
 import ProfileCard from "../organisms/ProfileCard";
+import profilePicture from "../../images/RominaManzano.jpg";
 
 const About = () => {
   const infoItems = [
@@ -23,6 +24,7 @@ const About = () => {
       name="Romina Manzano"
       title="Systems Engineer"
       infoItems={infoItems}
+      image={profilePicture.src}
     />
   );
 };
