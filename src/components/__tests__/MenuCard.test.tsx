@@ -1,29 +1,42 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import React from "react";
+import { render, fireEvent } from "@testing-library/react";
 
-import MenuCard, { MenuItem } from '../MenuCard';
+import MenuCard, { MenuItem } from "../MenuCard";
 
-describe('<MenuCard />', () => {
+describe("MenuCard", () => {
   const items: MenuItem[] = [
-    { id: '1', title: 'Item 1', component: 'Item 1' },
-    { id: '2', title: 'Item 2', component: 'Item 2' },
-    { id: '3', title: 'Item 3', component: 'Item 3' },
+    { id: "1", title: "Item 1", component: <div>Item 1</div> },
+    { id: "2", title: "Item 2", component: <div>Item 2</div> },
+    { id: "3", title: "Item 3", component: <div>Item 3</div> },
   ];
 
-  const onMenuChange = jest.fn();
+  it("should render all items", () => {
+    const onMenuChange = jest.fn();
+    const { getByText } = render(
+      <MenuCard
+        className="test-class"
+        items={items}
+        onMenuChange={onMenuChange}
+      />
+    );
 
-  const renderMenuCard = () => render(<MenuCard items={items} onMenuChange={onMenuChange} />);
-
-  it('should rendes the list of items', () => {
-    const { getByText } = renderMenuCard();
-    expect(getByText('Item 1')).toBeInTheDocument();
-    expect(getByText('Item 2')).toBeInTheDocument();
-    expect(getByText('Item 3')).toBeInTheDocument();
+    items.forEach((item) => {
+      expect(getByText(item.title)).toBeInTheDocument();
+    });
   });
 
-  it('should call the onMenuChange callback when an item is clicked', () => {
-    const { getByText } = renderMenuCard();
-    fireEvent.click(getByText('Item 2'));
-    expect(onMenuChange).toHaveBeenCalledWith(items[1]);
+  it("should call onMenuChange when an item is clicked", () => {
+    const onMenuChange = jest.fn();
+    const { getByText } = render(
+      <MenuCard
+        className="test-class"
+        items={items}
+        onMenuChange={onMenuChange}
+      />
+    );
+
+    fireEvent.click(getByText(items[0].title));
+
+    expect(onMenuChange).toHaveBeenCalledWith(items[0]);
   });
 });
