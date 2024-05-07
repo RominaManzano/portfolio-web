@@ -1,3 +1,5 @@
+"use client";
+
 import { Divider, Heading, Stack, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { MdVerified } from "react-icons/md";
@@ -54,7 +56,7 @@ const TimeLineItem = ({
         <Heading as="h5" size="xs" fontWeight="normal" color="gray.700">
           {startDate} to {endDate}
         </Heading>
-        <Text as="p" marginTop={2}>
+        <Text as="p" marginTop={2} fontSize={{ base: "sm", md: "md" }}>
           {description}
         </Text>
         {link ? (
