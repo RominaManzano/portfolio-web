@@ -10,4 +10,9 @@ const meta: Meta<typeof ProfileCard> = {
 export default meta;
 type Story = StoryObj<typeof ProfileCard>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    name: "Romina Manzano",
+    title: "Systems Engineer",
+  },
+};
