@@ -14,7 +14,7 @@ export const Default: Story = {
     items: [
       {
         title: "Frontend Engineer",
-        subtitle: "Software Engineer II",
+        subtitle: "Software Engineer II at TrovaTrip",
         description:
           "Worked with the MERN stack contributing to the different web products across the company. Improved my TypeScript, Storybook and micro-frontends knowledge and led the efforts to include unit testing to the main application.",
         startDate: "2023-09-25",

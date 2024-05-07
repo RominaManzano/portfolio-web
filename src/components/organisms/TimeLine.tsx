@@ -17,6 +17,7 @@ const TimeLine = ({ items }: TimeLineProps) => {
           startDate={item.startDate}
           endDate={item.endDate}
           link={item.link}
+          isLast={index === items.length - 1}
         />
       ))}
     </Stack>
