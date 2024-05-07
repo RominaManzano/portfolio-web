@@ -20,10 +20,10 @@ const ProfileCard = ({ name, title, image, infoItems }: ProfileCardProps) => {
         >
           <Stack direction="column" alignItems="center" flex={1}>
             <Avatar name={name} src={image} size="2xl" />
-            <Heading as="h1" size="lg">
+            <Heading as="h1" size="lg" color="gray.700">
               {name}
             </Heading>
-            <Heading as="h2" size="md">
+            <Heading as="h2" size="md" color="gray.500">
               {title}
             </Heading>
           </Stack>
