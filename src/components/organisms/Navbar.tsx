@@ -38,12 +38,12 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Experience",
     children: [
       {
-        label: "Job History",
+        label: "Professional Experience",
         subLabel: "Companies I've worked for",
         href: "#",
       },
       {
-        label: "Freelance Projects",
+        label: "Freelance/Personal Projects",
         subLabel: "Projects I've done on my own",
         href: "#",
       },

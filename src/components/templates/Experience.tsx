@@ -9,7 +9,7 @@ const Experience = () => (
     </Heading>
 
     <Heading as="h2" size="md" mb={4}>
-      Job History
+      Professional Experience
     </Heading>
 
     <TimeLine items={experienceItems} />
@@ -17,7 +17,7 @@ const Experience = () => (
     <Divider my={4} color="gray.600" borderWidth="1px" />
 
     <Heading as="h2" size="md" mb={4}>
-      Freelance Projects
+      Freelance/Personal Projects
     </Heading>
   </Stack>
 );
