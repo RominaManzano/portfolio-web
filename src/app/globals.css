@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+#about,
+#experience,
+#professional-experience,
+#freelance-personal-projects,
+#skills-and-tools,
+#contact {
+  scroll-margin-top: 80px;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
