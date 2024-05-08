@@ -1,10 +1,10 @@
 import { technologiesIconMap } from "@/data/technologies";
 import type { Meta, StoryObj } from "@storybook/react";
-import TechIcon from "./TechIcon";
+import TechBadge from "./TechBadge";
 
-const meta: Meta<typeof TechIcon> = {
-  title: "Atoms/TechIcon",
-  component: TechIcon,
+const meta: Meta<typeof TechBadge> = {
+  title: "Atoms/TechBadge",
+  component: TechBadge,
   argTypes: {
     name: {
       options: Object.keys(technologiesIconMap),
@@ -14,7 +14,7 @@ const meta: Meta<typeof TechIcon> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof TechIcon>;
+type Story = StoryObj<typeof TechBadge>;
 
 export const Default: Story = {
   args: {

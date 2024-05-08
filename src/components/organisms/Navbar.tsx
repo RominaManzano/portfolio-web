@@ -33,30 +33,32 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "About",
+    href: "#about",
   },
   {
     label: "Experience",
+    href: "#experience",
     children: [
       {
         label: "Professional Experience",
         subLabel: "Companies I've worked for",
-        href: "#",
+        href: "#professional-experience",
       },
       {
         label: "Freelance/Personal Projects",
         subLabel: "Projects I've done on my own",
-        href: "#",
+        href: "#freelance-personal-projects",
       },
     ],
   },
   {
-    label: "Skills",
-    href: "#",
+    label: "Skills & Tools",
+    href: "#skills-and-tools",
   },
-  {
-    label: "Contact",
-    href: "#",
-  },
+  // {
+  //   label: "Contact",
+  //   href: "#contact",
+  // },
 ];
 
 const githubUrl = process.env.NEXT_PUBLIC_GITHUB_PROFILE_URL;
