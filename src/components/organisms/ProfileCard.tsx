@@ -1,4 +1,5 @@
-import { Avatar, Card, CardBody, Heading, Stack } from "@chakra-ui/react";
+import { Box, Card, CardBody, Heading, Stack } from "@chakra-ui/react";
+import Image from "next/image";
 import InfoItem, { InfoItemProps } from "../molecules/InfoItem";
 
 interface ProfileCardProps {
@@ -19,7 +20,17 @@ const ProfileCard = ({ name, title, image, infoItems }: ProfileCardProps) => {
           gap={4}
         >
           <Stack direction="column" alignItems="center" flex={1}>
-            <Avatar name={name} src={image} size="2xl" bg="gray.300" />
+            {image ? (
+              <Box rounded="full" overflow="hidden">
+                <Image
+                  src={image}
+                  alt={name}
+                  width={200}
+                  height={200}
+                  priority
+                />
+              </Box>
+            ) : null}
             <Heading as="h1" size={{ base: "md", xl: "lg" }} color="gray.700">
               {name}
             </Heading>

@@ -1,14 +1,15 @@
 import {
+  Box,
   Card,
   CardBody,
   CardFooter,
   Heading,
-  Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import TechIcon from "../atoms/TechIcon";
+import Image from "next/image";
 import Link from "next/link";
+import TechIcon from "../atoms/TechIcon";
 
 export interface ProjectCardProps {
   title: string;
@@ -33,15 +34,16 @@ const ProjectCard = ({
         alignItems="center"
         width="full"
       >
-        <Image
-          src={imageUrl}
-          alt={title}
+        <Box
           width="full"
           borderTopLeftRadius="lg"
           borderTopRightRadius="lg"
           filter="brightness(0.8)"
           _hover={{ filter: "brightness(1)" }}
-        />
+          overflow="hidden"
+        >
+          <Image src={imageUrl} alt={title} width={350} height={300} />
+        </Box>
         <Heading
           as="h4"
           size="lg"
