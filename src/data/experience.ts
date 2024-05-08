@@ -1,4 +1,7 @@
 import { TimeLineItemProps } from "@/components/molecules/TimeLineItem";
+import { ProjectCardProps } from "@/components/organisms/ProjectCard";
+import reactRosario from "../images/ReactRosario.png";
+import hrManagement from "../images/HrManagement.png";
 
 export const experienceItems: TimeLineItemProps[] = [
   {
@@ -36,5 +39,33 @@ export const experienceItems: TimeLineItemProps[] = [
       url: "https://www.nimble.la/",
       text: "Nimble.LA",
     },
+  },
+];
+
+export const personalExperienceItems: ProjectCardProps[] = [
+  {
+    title: "React Rosario",
+    imageUrl: reactRosario.src,
+    description:
+      "Website for the React Rosario community, which I co-founded in 2019 along with some colleagues.",
+    link: {
+      url: "https://reactrosario.com/",
+      text: "React Rosario",
+    },
+    technologies: ["react-js", "gatsby-js", "styled-components", "javascript"],
+  },
+  {
+    title: "HR Management",
+    imageUrl: hrManagement.src,
+    description:
+      "Development of an internal HR management tool for a local company, in which I was the lead fullstack developer.",
+    technologies: [
+      "angular-js",
+      "node-js",
+      "express-js",
+      "javascript",
+      "bootstrap",
+      "mysql",
+    ],
   },
 ];

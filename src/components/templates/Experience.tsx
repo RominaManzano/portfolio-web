@@ -1,6 +1,7 @@
-import { Divider, Heading, Stack } from "@chakra-ui/react";
+import { experienceItems, personalExperienceItems } from "@/data/experience";
+import { Divider, Grid, GridItem, Heading, Stack } from "@chakra-ui/react";
+import ProjectCard from "../organisms/ProjectCard";
 import TimeLine from "../organisms/TimeLine";
-import { experienceItems } from "@/data/experience";
 
 const Experience = () => (
   <Stack>
@@ -19,6 +20,17 @@ const Experience = () => (
     <Heading as="h2" size="md" mb={4}>
       Freelance/Personal Projects
     </Heading>
+
+    <Grid
+      templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+      gap={4}
+    >
+      {personalExperienceItems.map((item) => (
+        <GridItem key={item.title} display="flex" justifyContent="center">
+          <ProjectCard {...item} />
+        </GridItem>
+      ))}
+    </Grid>
   </Stack>
 );
 

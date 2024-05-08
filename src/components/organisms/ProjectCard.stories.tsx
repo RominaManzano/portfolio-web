@@ -1,3 +1,4 @@
+import { personalExperienceItems } from "@/data/experience";
 import type { Meta, StoryObj } from "@storybook/react";
 import ProjectCard from "./ProjectCard";
 
@@ -11,14 +12,12 @@ type Story = StoryObj<typeof ProjectCard>;
 
 export const Default: Story = {
   args: {
-    title: "Project Title",
-    imageUrl: "https://via.placeholder.com/300x200",
-    description: "This is a brief description of the project",
-    technologies: ["react-js", "next-js", "chakra-ui"],
+    ...personalExperienceItems[1],
   },
-  render: (args) => (
-    <>
-      <ProjectCard {...args} />
-    </>
-  ),
+};
+
+export const WithLink: Story = {
+  args: {
+    ...personalExperienceItems[0],
+  },
 };

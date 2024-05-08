@@ -1,9 +1,20 @@
-import { Card, CardBody, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import TechIcon from "../atoms/TechIcon";
+import Link from "next/link";
 
-interface ProjectCatdProps {
+export interface ProjectCardProps {
   title: string;
   imageUrl: string;
   description: string;
+  link?: { url: string; text: string };
   technologies: string[];
 }
 
@@ -11,10 +22,11 @@ const ProjectCard = ({
   title,
   imageUrl,
   description,
+  link,
   technologies,
-}: ProjectCatdProps) => {
+}: ProjectCardProps) => {
   return (
-    <Card maxW="xs" rounded="lg">
+    <Card maxW={{ base: "none", lg: "xs" }} rounded="lg">
       <Stack
         position="relative"
         justifyContent="center"
@@ -28,7 +40,7 @@ const ProjectCard = ({
           borderTopLeftRadius="lg"
           borderTopRightRadius="lg"
           filter="brightness(0.8)"
-          _hover={{ filter: "brightness(0.9)" }}
+          _hover={{ filter: "brightness(1)" }}
         />
         <Heading
           as="h4"
@@ -41,8 +53,33 @@ const ProjectCard = ({
         </Heading>
       </Stack>
       <CardBody>
-        <Text as="p">{description}</Text>
+        <Text as="p" mb={2}>
+          {description}
+        </Text>
+        {link ? (
+          <Text
+            color="teal.600"
+            fontWeight="semibold"
+            _hover={{ color: "teal.500", textDecoration: "underline" }}
+          >
+            <Link href={link.url} target="_blank" rel="noopener noreferrer">
+              {link.text}
+            </Link>
+          </Text>
+        ) : null}
       </CardBody>
+      <CardFooter pt={0}>
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          gap={2}
+        >
+          {technologies.map((tech) => (
+            <TechIcon key={tech} name={tech} />
+          ))}
+        </Stack>
+      </CardFooter>
     </Card>
   );
 };
