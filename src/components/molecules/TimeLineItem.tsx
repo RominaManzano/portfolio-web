@@ -27,52 +27,50 @@ const TimeLineItem = ({
   endDate,
   link,
   isLast = false,
-}: TimeLineItemProps) => {
-  return (
-    <Stack direction="row">
-      <Stack alignItems="center">
+}: TimeLineItemProps) => (
+  <Stack direction="row">
+    <Stack alignItems="center">
+      <div>
+        <IconContext.Provider value={{ color: "#2493a7" }}>
+          <MdVerified size={28} />
+        </IconContext.Provider>
+      </div>
+      <Divider orientation="vertical" color="gray.600" borderWidth="1px" />
+      {isLast ? (
         <div>
           <IconContext.Provider value={{ color: "#2493a7" }}>
-            <MdVerified size={28} />
+            <FaCircle size={8} aria-label="starting-point" />
           </IconContext.Provider>
         </div>
-        <Divider orientation="vertical" color="gray.600" borderWidth="1px" />
-        {isLast ? (
-          <div>
-            <IconContext.Provider value={{ color: "#2493a7" }}>
-              <FaCircle size={8} />
-            </IconContext.Provider>
-          </div>
-        ) : null}
-      </Stack>
-
-      <Stack>
-        <Heading as="h3" size="md">
-          {title}
-        </Heading>
-        <Heading as="h4" size="sm" fontWeight="semibold" color="gray.600">
-          {subtitle}
-        </Heading>
-        <Heading as="h5" size="xs" fontWeight="normal" color="gray.700">
-          {startDate} to {endDate}
-        </Heading>
-        <Text as="p" marginTop={2} fontSize={{ base: "sm", md: "md" }}>
-          {description}
-        </Text>
-        {link ? (
-          <Text
-            color="teal.600"
-            fontWeight="semibold"
-            _hover={{ color: "teal.500", textDecoration: "underline" }}
-          >
-            <Link href={link.url} target="_blank" rel="noopener noreferrer">
-              {link.text}
-            </Link>
-          </Text>
-        ) : null}
-      </Stack>
+      ) : null}
     </Stack>
-  );
-};
+
+    <Stack>
+      <Heading as="h3" size="md">
+        {title}
+      </Heading>
+      <Heading as="h4" size="sm" fontWeight="semibold" color="gray.600">
+        {subtitle}
+      </Heading>
+      <Heading as="h5" size="xs" fontWeight="normal" color="gray.700">
+        {startDate} to {endDate ? endDate : "present"}
+      </Heading>
+      <Text as="p" marginTop={2} fontSize={{ base: "sm", md: "md" }}>
+        {description}
+      </Text>
+      {link ? (
+        <Text
+          color="teal.600"
+          fontWeight="semibold"
+          _hover={{ color: "teal.500", textDecoration: "underline" }}
+        >
+          <Link href={link.url} target="_blank" rel="noopener noreferrer">
+            {link.text}
+          </Link>
+        </Text>
+      ) : null}
+    </Stack>
+  </Stack>
+);
 
 export default TimeLineItem;

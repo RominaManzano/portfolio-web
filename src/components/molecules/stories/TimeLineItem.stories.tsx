@@ -1,6 +1,6 @@
 import { experienceItems } from "@/data/experience";
 import type { Meta, StoryObj } from "@storybook/react";
-import TimeLineItem from "./TimeLineItem";
+import TimeLineItem from "../TimeLineItem";
 
 const meta: Meta<typeof TimeLineItem> = {
   title: "Molecules/TimeLineItem",
