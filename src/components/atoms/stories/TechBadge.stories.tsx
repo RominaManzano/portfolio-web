@@ -1,6 +1,6 @@
 import { technologiesIconMap } from "@/data/technologies";
 import type { Meta, StoryObj } from "@storybook/react";
-import TechBadge from "./TechBadge";
+import TechBadge from "../TechBadge";
 
 const meta: Meta<typeof TechBadge> = {
   title: "Atoms/TechBadge",

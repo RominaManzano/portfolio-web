@@ -1,6 +1,6 @@
 import { personalExperienceItems } from "@/data/experience";
 import type { Meta, StoryObj } from "@storybook/react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../ProjectCard";
 
 const meta: Meta<typeof ProjectCard> = {
   title: "Organisms/ProjectCard",

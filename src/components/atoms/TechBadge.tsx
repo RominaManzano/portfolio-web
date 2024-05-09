@@ -15,6 +15,7 @@ const TechBadge = ({ name }: TechBadgeProps) => {
 
   return (
     <Card
+      aria-label={name}
       width="100px"
       height="100px"
       _hover={{

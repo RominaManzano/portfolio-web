@@ -1,6 +1,6 @@
 import { technologiesIconMap } from "@/data/technologies";
 import type { Meta, StoryObj } from "@storybook/react";
-import TechIcon from "./TechIcon";
+import TechIcon from "../TechIcon";
 
 const meta: Meta<typeof TechIcon> = {
   title: "Atoms/TechIcon",
