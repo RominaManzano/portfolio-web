@@ -27,7 +27,7 @@ const ProjectCard = ({
   technologies,
 }: ProjectCardProps) => {
   return (
-    <Card maxW={{ base: "none", lg: "xs" }} rounded="lg">
+    <Card maxW="xs" rounded="lg">
       <Stack
         position="relative"
         justifyContent="center"

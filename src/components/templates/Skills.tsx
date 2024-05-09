@@ -8,7 +8,14 @@ const Skills = () => (
       Skills & Tools
     </Heading>
 
-    <Grid gap={8} templateColumns="repeat(5, minmax(100px, 1fr))">
+    <Grid
+      gap={8}
+      templateColumns={{
+        base: "repeat(2, 1fr)",
+        md: "repeat(4, 1fr)",
+        lg: "repeat(5, 1fr)",
+      }}
+    >
       {Object.keys(technologiesIconMap).map((tech) => (
         <GridItem key={tech} display="flex" justifyContent="center">
           <TechBadge name={tech} />
