@@ -44,7 +44,7 @@ const ProjectCard = ({
         <Image src={imageUrl} alt={title} width={350} height={300} />
       </Box>
       <Heading
-        as="h4"
+        as="h3"
         size="lg"
         position="absolute"
         color="white"

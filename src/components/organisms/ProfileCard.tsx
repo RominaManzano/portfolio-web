@@ -27,7 +27,7 @@ const ProfileCard = ({ name, title, image, infoItems }: ProfileCardProps) => (
           <Heading as="h1" size={{ base: "md", xl: "lg" }} color="gray.700">
             {name}
           </Heading>
-          <Heading as="h2" size={{ base: "sm", xl: "md" }} color="gray.500">
+          <Heading as="h2" size={{ base: "sm", xl: "md" }} color="gray.600">
             {title}
           </Heading>
         </Stack>

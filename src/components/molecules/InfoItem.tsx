@@ -13,10 +13,10 @@ const InfoItem = ({ title, description }: InfoItemProps) => (
     borderBottomColor="gray.200"
     paddingBottom={2}
   >
-    <Heading as="h3" size="sm" color="gray.600">
+    <Heading as="h3" size="sm" color="gray.700">
       {title}
     </Heading>
-    <Heading as="h4" size="xs" color="gray.500" fontWeight="normal">
+    <Heading as="h4" size="xs" color="gray.600" fontWeight="normal">
       {description}
     </Heading>
   </Stack>
