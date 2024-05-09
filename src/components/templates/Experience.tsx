@@ -27,7 +27,13 @@ const Experience = () => (
       Freelance/Personal Projects
     </Heading>
 
-    <SimpleGrid spacing={4} templateColumns="repeat(2, minmax(300px, 1fr))">
+    <SimpleGrid
+      spacing={4}
+      templateColumns={{
+        base: "repeat(1, minmax(250px, 1fr))",
+        md: "repeat(2, minmax(300px, 1fr))",
+      }}
+    >
       {personalExperienceItems.map((item) => (
         <GridItem key={item.title} display="flex" justifyContent="center">
           <ProjectCard {...item} />
